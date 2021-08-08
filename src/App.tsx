@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Layer } from "./lib/main";
+import React from "react";
+import { Layer } from "./lib";
 
 export default function App() {
   return (
