@@ -28,13 +28,16 @@ export default defineConfig({
   },
   plugins: [
     reactRefresh(),
-    typescript({
-      target: "es6",
-      rootDir: resolvePath("./src/lib"),
-      declaration: true,
-      declarationDir: resolvePath("./dist"),
-      exclude: resolvePath("../node_modules/**"),
-      allowSyntheticDefaultImports: true,
-    }),
+    {
+      ...typescript({
+        target: "es6",
+        rootDir: resolvePath("./src/lib"),
+        declaration: true,
+        declarationDir: resolvePath("./dist"),
+        exclude: resolvePath("../node_modules/**"),
+        allowSyntheticDefaultImports: true,
+      }),
+      apply: "build",
+    },
   ],
 });
