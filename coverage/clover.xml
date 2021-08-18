@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1629320243945" clover="3.2.0">
-  <project timestamp="1629320243945" name="All files">
-    <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6" elements="23" coveredelements="23" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
-    <file name="useDimensions.ts" path="/home/tpmarc/Source/react-layered-composition/src/lib/hooks/useDimensions.ts">
-      <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
+<coverage generated="1629321560093" clover="3.2.0">
+  <project timestamp="1629321560093" name="All files">
+    <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3" elements="15" coveredelements="15" complexity="0" loc="8" ncloc="8" packages="1" files="1" classes="1"/>
+    <file name="usePositions.ts" path="/home/tpmarc/Source/react-layered-composition/src/lib/hooks/usePositions.ts">
+      <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
       <line num="1" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
-      <line num="8" count="8" type="stmt"/>
-      <line num="10" count="8" type="stmt"/>
-      <line num="15" count="8" type="stmt"/>
-      <line num="19" count="2" type="stmt"/>
-      <line num="22" count="8" type="stmt"/>
-      <line num="27" count="8" type="stmt"/>
-      <line num="31" count="2" type="stmt"/>
-      <line num="35" count="20" type="cond" truecount="2" falsecount="0"/>
-      <line num="36" count="8" type="stmt"/>
-      <line num="39" count="12" type="stmt"/>
-      <line num="42" count="8" type="stmt"/>
+      <line num="8" count="6" type="stmt"/>
+      <line num="9" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="10" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="6" type="stmt"/>
+      <line num="17" count="6" type="stmt"/>
+      <line num="20" count="6" type="stmt"/>
     </file>
   </project>
 </coverage>

@@ -2,7 +2,7 @@ import { renderHook, act } from '@testing-library/react-hooks'
 import { useDimensions } from './useDimensions'
 
 describe('useDimensions', () => {
-  it('should render with zero on both dimensions on init without args', () => {
+  it('should render with zero on both dimensions on init with unit only', () => {
     const { result } = renderHook(() => useDimensions('px'))
 
     expect(result.current.width).toEqual(0)
