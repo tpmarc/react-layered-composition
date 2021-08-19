@@ -6,7 +6,7 @@ export interface ShapeLayerProps {
 }
 
 export function ShapeLayer({ children }: ShapeLayerProps) {
-  const { shape, setShape, dimensions, positions } = useShape()
+  const { shape, setShape, rotation, dimensions, positions } = useShape()
 
-  return <>{children({ shape, setShape, dimensions, positions })}</>
+  return <>{children({ shape, setShape, rotation, dimensions, positions })}</>
 }

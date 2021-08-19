@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useUnit } from '../contexts/UnitContext'
 import { UseDimensions, useDimensions } from './useDimensions'
 import { UsePositions, usePositions } from './usePositions'
+import { UseRotation, useRotation } from './useRotation'
 
 export enum Shapes {
   Star = 'star',
@@ -19,6 +20,7 @@ export interface UseShape {
   setShape: (shape: Shapes) => void
   dimensions: UseDimensions
   positions: UsePositions
+  rotation: UseRotation
 }
 
 export function useShape(initialShape?: Shapes) {
@@ -27,6 +29,7 @@ export function useShape(initialShape?: Shapes) {
   const unit = useUnit()
   const dimensions = useDimensions(unit)
   const positions = usePositions(unit)
+  const rotation = useRotation()
 
-  return { shape, setShape, dimensions, positions }
+  return { shape, setShape, rotation, dimensions, positions }
 }

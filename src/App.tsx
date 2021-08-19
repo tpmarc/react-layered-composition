@@ -8,7 +8,7 @@ export default function App() {
   return (
     <UnitProvider value={unit}>
       <ShapeLayer>
-        {({ positions, dimensions }) => (
+        {({ rotation, positions, dimensions }) => (
           <>
             <div
               style={{
@@ -19,6 +19,7 @@ export default function App() {
                 gap: '1rem',
                 backgroundColor: 'limegreen',
                 position: 'absolute',
+                transform: `rotate(${rotation.value}deg)`,
                 top: positions.yRepresentation,
                 left: positions.xRepresentation,
                 width: dimensions.widthRepresentation,
@@ -90,6 +91,19 @@ export default function App() {
                   onChange={(e) => dimensions.setHeight(Number(e.target.value))}
                 />
                 {unit}
+              </fieldset>
+
+              <fieldset>
+                <label htmlFor="rotation">rotation</label>
+                <input
+                  id="rotation"
+                  type="range"
+                  value={rotation.value}
+                  min="0"
+                  max="360"
+                  onChange={(e) => rotation.setValue(Number(e.target.value))}
+                />
+                degrees
               </fieldset>
             </form>
           </>

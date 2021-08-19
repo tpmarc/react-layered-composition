@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1629397896031" clover="3.2.0">
-  <project timestamp="1629397896031" name="All files">
-    <metrics statements="57" coveredstatements="57" conditionals="16" coveredconditionals="16" methods="14" coveredmethods="14" elements="87" coveredelements="87" complexity="0" loc="57" ncloc="57" packages="4" files="6" classes="6"/>
+<coverage generated="1629403456678" clover="3.2.0">
+  <project timestamp="1629403456678" name="All files">
+    <metrics statements="70" coveredstatements="70" conditionals="16" coveredconditionals="16" methods="18" coveredmethods="18" elements="104" coveredelements="104" complexity="0" loc="70" ncloc="70" packages="4" files="7" classes="7"/>
     <package name="components">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="ShapeLayer.tsx" path="/home/tpmarc/Source/react-layered-composition/src/lib/components/ShapeLayer.tsx">
@@ -29,7 +29,7 @@
       </file>
     </package>
     <package name="hooks">
-      <metrics statements="39" coveredstatements="39" conditionals="8" coveredconditionals="8" methods="10" coveredmethods="10"/>
+      <metrics statements="52" coveredstatements="52" conditionals="8" coveredconditionals="8" methods="14" coveredmethods="14"/>
       <file name="useDimensions.ts" path="/home/tpmarc/Source/react-layered-composition/src/lib/hooks/useDimensions.ts">
         <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
         <line num="1" count="3" type="stmt"/>
@@ -57,36 +57,52 @@
         <line num="28" count="6" type="stmt"/>
         <line num="31" count="6" type="stmt"/>
       </file>
+      <file name="useRotation.ts" path="/home/tpmarc/Source/react-layered-composition/src/lib/hooks/useRotation.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="12" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="28" count="12" type="stmt"/>
+      </file>
       <file name="useShape.ts" path="/home/tpmarc/Source/react-layered-composition/src/lib/hooks/useShape.ts">
-        <metrics statements="18" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <metrics statements="20" coveredstatements="20" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
-        <line num="6" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="7" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="8" count="2" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
         <line num="10" count="2" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="25" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
         <line num="31" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
       </file>
     </package>
     <package name="utils">
       <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
       <file name="positiveValue.ts" path="/home/tpmarc/Source/react-layered-composition/src/lib/utils/positiveValue.ts">
         <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
-        <line num="1" count="4" type="stmt"/>
-        <line num="2" count="31" type="cond" truecount="4" falsecount="0"/>
-        <line num="3" count="18" type="cond" truecount="2" falsecount="0"/>
-        <line num="6" count="13" type="stmt"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="43" type="cond" truecount="4" falsecount="0"/>
+        <line num="3" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="17" type="stmt"/>
       </file>
     </package>
   </project>
