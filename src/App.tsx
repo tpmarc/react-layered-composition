@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ShapeLayer } from './lib'
+import { ShapeLayer, Shapes } from './lib'
 import { UnitProvider, Units } from './lib/contexts/UnitContext'
 
 export default function App() {
@@ -8,10 +8,11 @@ export default function App() {
   return (
     <UnitProvider value={unit}>
       <ShapeLayer>
-        {({ rotation, positions, dimensions }) => (
+        {({ styles, shape, setShape, rotation, positions, dimensions }) => (
           <>
             <div
               style={{
+                ...styles,
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
@@ -26,6 +27,7 @@ export default function App() {
                 height: dimensions.heightRepresentation,
               }}
             >
+              <span>{shape}</span>
               <span>Width: {dimensions.widthRepresentation}</span>
               <span>Height: {dimensions.heightRepresentation}</span>
             </div>
@@ -33,6 +35,73 @@ export default function App() {
             <form
               style={{ position: 'fixed', bottom: 0, left: 0, display: 'flex' }}
             >
+              <fieldset>
+                <label htmlFor="shape">Shape</label>
+
+                <select
+                  id="shape"
+                  onChange={(e) => setShape(e.target.value as Shapes)}
+                >
+                  <option value={Shapes.Bevel}>{Shapes.Bevel}</option>
+
+                  <option value={Shapes.Circle}>{Shapes.Circle}</option>
+
+                  <option value={Shapes.Close}>{Shapes.Close}</option>
+
+                  <option value={Shapes.Cross}>{Shapes.Cross}</option>
+
+                  <option value={Shapes.Decagon}>{Shapes.Decagon}</option>
+
+                  <option value={Shapes.Ellipse}>{Shapes.Ellipse}</option>
+
+                  <option value={Shapes.Frame}>{Shapes.Frame}</option>
+
+                  <option value={Shapes.Heptagon}>{Shapes.Heptagon}</option>
+
+                  <option value={Shapes.Hexagon}>{Shapes.Hexagon}</option>
+
+                  <option value={Shapes.LeftArrow}>{Shapes.LeftArrow}</option>
+
+                  <option value={Shapes.LeftChevron}>
+                    {Shapes.LeftChevron}
+                  </option>
+
+                  <option value={Shapes.LeftPoint}>{Shapes.LeftPoint}</option>
+
+                  <option value={Shapes.Message}>{Shapes.Message}</option>
+
+                  <option value={Shapes.Nonagon}>{Shapes.Nonagon}</option>
+
+                  <option value={Shapes.Octagon}>{Shapes.Octagon}</option>
+
+                  <option value={Shapes.Parallelogram}>
+                    {Shapes.Parallelogram}
+                  </option>
+
+                  <option value={Shapes.Pentagon}>{Shapes.Pentagon}</option>
+
+                  <option value={Shapes.Rabbet}>{Shapes.Rabbet}</option>
+
+                  <option value={Shapes.Rectangle}>{Shapes.Rectangle}</option>
+
+                  <option value={Shapes.Rhombus}>{Shapes.Rhombus}</option>
+
+                  <option value={Shapes.RightArrow}>{Shapes.RightArrow}</option>
+
+                  <option value={Shapes.RightChevron}>
+                    {Shapes.RightChevron}
+                  </option>
+
+                  <option value={Shapes.RightPoint}>{Shapes.RightPoint}</option>
+
+                  <option value={Shapes.Star}>{Shapes.Star}</option>
+
+                  <option value={Shapes.Trapezoid}>{Shapes.Trapezoid}</option>
+
+                  <option value={Shapes.Triangle}>{Shapes.Triangle}</option>
+                </select>
+              </fieldset>
+
               <fieldset>
                 <label htmlFor="unit">Unit</label>
 
