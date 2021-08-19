@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import ShapeLayer from './ShapeLayer'
+import { ShapeLayer } from './ShapeLayer'
 import { DEFAULT_SHAPE } from '../hooks/useShape'
 import { DEFAULT_X, DEFAULT_Y } from '../hooks/usePositions'
 import { DEFAULT_HEIGHT, DEFAULT_WIDTH } from '../hooks/useDimensions'
