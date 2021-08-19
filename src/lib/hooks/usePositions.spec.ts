@@ -41,21 +41,4 @@ describe('usePositions', () => {
     expect(result.current.xRepresentation).toEqual(`${x}${unit}`)
     expect(result.current.yRepresentation).toEqual(`${y}${unit}`)
   })
-
-  it('should correct values after changing the unit', () => {
-    let unit = 'px'
-    const x = 5.0
-    const y = 3.9
-    const { result } = renderHook(() => usePositions(unit, x, y))
-
-    act(() => {
-      unit = 'cm'
-      result.current.setUnit(unit)
-    })
-
-    expect(result.current.x).toEqual(x)
-    expect(result.current.y).toEqual(y)
-    expect(result.current.xRepresentation).toEqual(`${x}${unit}`)
-    expect(result.current.yRepresentation).toEqual(`${y}${unit}`)
-  })
 })

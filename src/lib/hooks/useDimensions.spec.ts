@@ -67,22 +67,4 @@ describe('useDimensions', () => {
     expect(result.current.widthRepresentation).toEqual('0px')
     expect(result.current.heightRepresentation).toEqual('0px')
   })
-
-  it('should allow to change unit and render correctly', () => {
-    let unit = 'px'
-    const width = 400
-    const height = 300
-    const { result } = renderHook(() => useDimensions(unit, width, height))
-
-    expect(result.current.widthRepresentation).toEqual(`${width}${unit}`)
-    expect(result.current.heightRepresentation).toEqual(`${height}${unit}`)
-
-    act(() => {
-      unit = 'cm'
-      result.current.setUnit(unit)
-    })
-
-    expect(result.current.widthRepresentation).toEqual(`${width}${unit}`)
-    expect(result.current.heightRepresentation).toEqual(`${height}${unit}`)
-  })
 })

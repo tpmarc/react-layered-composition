@@ -2,8 +2,6 @@ import { useState } from 'react'
 import { positiveValue } from '../utils/positiveValue'
 
 export interface UseDimensions {
-  unit: string
-  setUnit: (unit: string) => void
   width: number
   widthRepresentation: string
   setWidth: (width: number) => void
@@ -12,16 +10,14 @@ export interface UseDimensions {
   setHeight: (height: number) => void
 }
 
-export const DEFAULT_WIDTH = 50
-export const DEFAULT_HEIGHT = 50
+export const DEFAULT_WIDTH = 100
+export const DEFAULT_HEIGHT = 100
 
 export function useDimensions(
-  initialUnit: string,
+  unit: string,
   initialWidth?: number,
   initialHeight?: number
 ): UseDimensions {
-  const [unit, setUnit] = useState<string>(initialUnit)
-
   const [width, _setWidth] = useState<number>(
     positiveValue(initialWidth, DEFAULT_WIDTH)
   )
@@ -47,8 +43,6 @@ export function useDimensions(
   }
 
   return {
-    unit,
-    setUnit,
     width,
     widthRepresentation: _getWidthRepresentation(),
     setWidth,

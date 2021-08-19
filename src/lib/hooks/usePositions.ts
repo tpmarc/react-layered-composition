@@ -1,8 +1,6 @@
 import { useState } from 'react'
 
 export interface UsePositions {
-  unit: string
-  setUnit: (unit: string) => void
   x: number
   xRepresentation: string
   setX: (x: number) => void
@@ -15,11 +13,10 @@ export const DEFAULT_X = 0
 export const DEFAULT_Y = 0
 
 export function usePositions(
-  initialUnit: string,
+  unit: string,
   initialX?: number,
   initialY?: number
 ): UsePositions {
-  const [unit, setUnit] = useState<string>(initialUnit)
   const [x, setX] = useState<number>(initialX || DEFAULT_X)
   const [y, setY] = useState<number>(initialY || DEFAULT_Y)
 
@@ -32,8 +29,6 @@ export function usePositions(
   }
 
   return {
-    unit,
-    setUnit,
     x,
     xRepresentation: _getXRepresentation(),
     setX,
