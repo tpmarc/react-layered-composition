@@ -12,8 +12,13 @@ describe('positiveValue', () => {
     expect(positiveValue(-100.42)).toEqual(0)
   })
 
-  it('should return the zero when the value provided is null or undefined', () => {
+  it('should return the zero when the value provided is null or undefined and there is no default value provided', () => {
     expect(positiveValue(null)).toEqual(0)
     expect(positiveValue(undefined)).toEqual(0)
+  })
+
+  it('should return the default value provided when the value provided is null or undefined', () => {
+    expect(positiveValue(null, 50)).toEqual(50)
+    expect(positiveValue(undefined, 14.4)).toEqual(14.4)
   })
 })

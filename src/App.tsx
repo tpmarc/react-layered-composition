@@ -1,10 +1,5 @@
-import React from "react";
-import { Layer } from "./lib";
+import React from 'react'
 
 export default function App() {
-  return (
-    <div className="App">
-      <Layer />
-    </div>
-  );
+  return <div className="App"></div>
 }

@@ -1,6 +1,6 @@
-export function positiveValue(value?: number | null) {
+export function positiveValue(value?: number | null, defaultValue?: number) {
   if (value === null || value === undefined) {
-    return 0
+    return defaultValue || 0
   }
 
   return Math.max(0, value)

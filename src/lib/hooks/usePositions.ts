@@ -11,14 +11,17 @@ export interface UsePositions {
   setY: (y: number) => void
 }
 
+export const DEFAULT_X = 0
+export const DEFAULT_Y = 0
+
 export function usePositions(
   initialUnit: string,
   initialX?: number,
   initialY?: number
 ): UsePositions {
   const [unit, setUnit] = useState<string>(initialUnit)
-  const [x, setX] = useState<number>(initialX || 0)
-  const [y, setY] = useState<number>(initialY || 0)
+  const [x, setX] = useState<number>(initialX || DEFAULT_X)
+  const [y, setY] = useState<number>(initialY || DEFAULT_Y)
 
   function _getXRepresentation() {
     return `${x}${unit}`
